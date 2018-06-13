@@ -3,25 +3,9 @@
   <head>
     <title>CTS 2018 Progress Tracker</title>
     <script>
-    	//var num_vids;
-    	
     	var num_vids = [105, 106, 28, 24, 36, 0, 0];
     	var week_totals = [105, 211, 239, 263, 299, 299, 299];
     	var vid_total = week_totals[week_totals.length-1];
-
-    	/*function computeWeekTotals(week, num){
-    		switch(week){
-    			case 1: 
-    				num_vids = num_week1_vids;
-    				break;
-				case 2:
-					num_vids = num_week2_vids;
-					break;
-				default:
-					num_vids = -1;
-    		}
-    		return ((num / num_vids) * 100).toFixed(1);
-    	}*/
 
     	function computeWeekPercent(total_percent){
     		var week, week_vid_total, week_vid_num, week_percent;
@@ -72,28 +56,10 @@
 
     		return ("You are " + week_percent + "% through week " + week + ".")
     	}
-
     </script>
   </head>
   
   <body>
-    <!--<form oninput="progress.value=parseInt(total.value)/">-->
-	<!--<form oninput="progress.value=computeWeekTotals(1, total.value) + '%'">
-		<label for="total">Week 1 videos done:</label>
-		<input type="text" name="total" value="0" /><br>
-
-		Week 1 Progress: <output name="progress"></output>
-	</form>
-	<br>
-	<form oninput="progress.value=computeWeekTotals(2, total.value) + '%'">
-		<label for="total">Week 2 videos done:</label>
-		<input type="text" name="total" value="0" /><br>
-
-		Week 2 Progress: <output name="progress"></output>
-	</form>
-
-	<br><br><br><br><br>-->
-
 	<form oninput="progress.value = computeWeekPercent(total.value)">
 		<label for="total">Enter percentage:</label>
 		<input type="text" name="total" value="0" /><br>
@@ -103,10 +69,3 @@
 
   </body>
 <html>
-
-<!-- 
-Maybe have students plug in their percentage? 
-Then divide % by 100 and multiply by total videos to get what vid they are on, 
-then use if and less/greater than to see what week they are on, 
-then compute percentage through the week? 
--->
