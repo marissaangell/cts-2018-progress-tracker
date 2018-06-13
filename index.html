@@ -2,9 +2,24 @@
 <html>
   <head>
     <title>CTS 2018 Progress Tracker</title>
+    <script>
+    	var week1_num_vids = 105;
+
+    	function computeWeek1Totals(num){
+    		return ((num / week1_num_vids) * 100).toFixed(1);
+    	}
+
+    </script>
   </head>
   
   <body>
-    <p>Test</p>
+    <!--<form oninput="progress.value=parseInt(total.value)/">-->
+	<form oninput="progress.value=computeWeek1Totals(total.value) + '%'">
+		<label for="total">Videos done:</label>
+		<input type="text" name="total" value="0" /><br>
+
+		Week 1 Progress: <output name="progress"></output>
+	</form>
+
   </body>
 <html>
